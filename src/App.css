@@ -1,32 +1,79 @@
-.App {
-  text-align: center;
+body {
+  height: 100%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
+  background-size: cover;
+  font-family: "Permanent Marker", cursive;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.shade {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(150deg, rgba(0, 0, 0, 0.65), transparent);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.blackboard {
+  position: relative;
+  width: 85%;
+  max-width: 640px;
+  margin: 7% auto;
+  border: tan solid 12px;
+  border-top: #bda27e solid 12px;
+  border-left: #b19876 solid 12px;
+  border-bottom: #c9ad86 solid 12px;
+  box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f,
+    3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+  background-image: radial-gradient(
+      circle at left 30%,
+      rgba(34, 34, 34, 0.3),
+      rgba(34, 34, 34, 0.3) 80px,
+      rgba(34, 34, 34, 0.5) 100px,
+      rgba(51, 51, 51, 0.5) 160px,
+      rgba(51, 51, 51, 0.5)
+    ),
+    linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent),
+    radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MyForm {
+  padding: 20px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MyForm > * {
+  flex: 100%;
+}
+
+.Halfwidth {
+  flex: inherit;
+  width: 48%;
+}
+
+.Title {
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.Subtitle {
+  text-align: center;
+  padding-top: 1.0em;
+  padding-bottom: 0.5em;
+}
+
+label {
+  color: rgba(238, 238, 238, 0.7) !important;
+  font-size: 1.2em !important;
+}
+
+input {
+  color: white !important;
+  font-size: 1.6em !important;
 }
