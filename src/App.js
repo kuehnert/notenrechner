@@ -4,6 +4,7 @@ import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles"
 import React, { Component } from "react"
 import "./App.css"
 import Grader from "./Grader"
+import Notes from "./Notes";
 
 const theme = createMuiTheme({
   type: "dark",
@@ -28,6 +29,9 @@ class App extends Component {
         <div className="shade">
           <div className="blackboard">
             <Grader />
+          </div>
+          <div className="blackboard">
+            <Notes />
           </div>
         </div>
       </MuiThemeProvider>
